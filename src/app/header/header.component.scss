@@ -1,0 +1,104 @@
+:host {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    padding: 12px 14px;
+    height: 66px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.menu-bar {
+    color: rgba(255,255,255,0.75);
+    font-size: 32px;
+    position: relative;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    font-family: ETmodules;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 0;
+    direction: ltr;
+}
+
+.show {
+    opacity: 1;
+    height: 163px !important;
+}
+
+.hide {
+    opacity: 0;
+    height: 0;
+}
+
+.menu {
+    list-style: none;
+    text-align: left;
+    border-top: 3px solid #ffffff;
+    position: absolute;
+    right: 0;
+    margin-right: 8px;
+    z-index: 99;
+    top: 30px;
+    padding: 7.5px;
+    width: 150px;
+    line-height: 26px;
+    box-sizing: border-box;
+    background-color: rgba(30,45,68,0.9);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    -webkit-transition: opacity .5s linear, height .5s linear;
+    -moz-transition: opacity .5s linear, height .5s linear;
+      -o-transition: opacity .5s linear, height .5s linear;
+     -ms-transition: opacity .5s linear, height .5s linear;
+         transition: opacity .5s linear, height .5s linear;
+    overflow: hidden;
+}
+
+.menu li {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.menu li a,
+.menu li a:hover {
+    text-decoration: none;
+}
+
+.menu li:hover {
+    opacity: .7;
+}
+
+.menu li a.current-menu-item {
+    color: #FFFFFF;
+}
+
+.menu li a {
+    box-sizing: border-box;
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    border-bottom: 1px solid rgba(0,0,0,.03);
+    margin: 0;
+    text-decoration: none;
+    padding: 10px 6.75px;
+    transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
+    vertical-align: baseline;
+    display: inline-block;
+}

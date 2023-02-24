@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="donation">
+    <h2>MADE WITH PRAYERS</h2>
+    <p>Turn your hopes into art through AI. Start by donating to our cause.</p>
+    <button (click)="toggleDonate()">DONATE</button>
+</div>
+<div class="donation-step2" [ngClass]="showDonation ? 'show' : 'hide'">
+    <div>
+        <button *ngFor="let a of fixedAmounts" (click)="setDonation(a)" [ngClass]="a.selected ? 'selected': ''">${{a.amount}}</button>
+        <input type="number" name="ca" #ca="ngModel" [(ngModel)]="customAmount" min="1" placeholder="OTHER AMOUNT" (ngModelChange)="onPropertyChange(ca)">
+    </div>
+    <button [disabled]="ca.invalid" (click)="proceed()">PROCEED</button>
+</div>
+<app-footer class="bottom-0"></app-footer>

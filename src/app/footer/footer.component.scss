@@ -1,0 +1,13 @@
+:host {
+    width: 50%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    height: 50px;
+    padding: 10px 6px;
+    box-sizing: border-box;
+}
+
+:host a img {
+    height: 100%;
+}
