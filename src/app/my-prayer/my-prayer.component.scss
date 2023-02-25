@@ -1,0 +1,233 @@
+:host {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center bottom 0px;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0) 100%,#000000 100%),url(/assets/bg-night-stars.jpeg);
+    padding: 99px 5% 80px 5%;
+    position: relative;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    box-sizing: border-box;
+    gap: 33px;
+    width: 100%;
+}
+
+.section h2 {
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-block: 0;
+}
+
+.section p {
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.6em;
+    font-size: 11px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 62px 30px 62px;
+}
+
+.details {
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 8% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(253,249,237,0.82);
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.details > h2 {
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1em;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.details > textarea {
+    border-radius: 7px 7px 7px 7px;
+    overflow: hidden;
+    min-height: 150px;
+    display: block;
+    color: rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.7);
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.details > div:last-child {
+    padding-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.details > div:last-child > button {
+    color: #FFFFFF;
+    border-color: #1e2d44;
+    border-radius: 15px;
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    background-color: #1e2d44;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0.3em 24px;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+.details > div:last-child > button:disabled {
+    cursor: not-allowed;
+    color: #999;
+}
+
+:host > button {
+    padding: 30px 0;
+    font-family: 'PP Formula Medium Italic',Helvetica,Arial,Lucida,sans-serif;
+    box-sizing: border-box;
+    background: transparent;
+    color: #666;
+    font-weight: 500;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    text-decoration: underline;
+}
+
+.guide {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85.75%;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 3px 10px -1px rgb(0 0 0 / 30%), 0 2px 50px 2px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    border: 1px solid #333;
+    background-color: rgba(0,0,0,0.8)!important;
+    z-index: 999;
+    color: #ffffff;
+    line-height: 1.3em;
+    gap: 31px;
+    padding: 7.145% 8.81%;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.guide-visible {
+    display: flex !important;
+}
+
+.guide > h1 {
+    font-weight: 700;
+    font-size: large;
+    font-family: 'PP Formula Light';
+    box-sizing: border-box;
+    margin: 11px 0 0 0;
+}
+
+.guide > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guide p, .guide > ul {
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    margin: 0;
+    margin: 0;
+    margin-block: 0;
+    padding-inline: 0;
+    box-sizing: border-box;
+}
+
+.guide p {
+    line-height: 13px;
+}
+
+.guide > ul {
+    line-height: 26px;
+    padding-left: 10px; 
+}
+
+.guide > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    color: #eee;
+    border: 0;
+    outline: 0;
+    text-shadow: 0 0 1px #000, 0 0 3px #000a;
+    cursor: pointer;
+    font-family: Courier New,monospace;
+    font-size: 16px;
+    font-weight: 700;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    opacity: .7;
+}
+
+.overlay {
+    display: none;
+    background: rgba(0,0,0,.55);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    transition: -webkit-backdrop-filter 1s 1s,backdrop-filter 1s 1s;
+}
+
+.overlay-visible {
+    display: block !important;
+    backdrop-filter: saturate(180%) blur(5px);
+}
+
+@media (max-width: 280px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .section p {
+        margin: 0 15px 15px 15px;
+    }
+}
+
+@media (max-height: 600px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+}

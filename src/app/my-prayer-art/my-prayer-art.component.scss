@@ -1,0 +1,152 @@
+:host {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center bottom 0px;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0) 100%,#000000 100%),url(/assets/bg-night-stars.jpeg);
+    padding: 99px 5% 80px 5%;
+    position: relative;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    box-sizing: border-box;
+    gap: 33px;
+    width: 100%;
+}
+
+.section h2 {
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-block: 0;
+}
+
+.section p {
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.6em;
+    font-size: 11px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 62px;
+}
+
+.details {
+    border-radius: 15px 15px 15px 15px;
+    width: 100%;
+    margin: 0;
+    padding: 8% 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.details > div:first-of-type {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.details > div:first-of-type > img:first-of-type {
+    width: 100%;
+    z-index: 10;
+}
+
+.details > div:first-of-type > img:last-child {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: calc(100% - 1px);
+    z-index: 5;
+    height: calc(100% - 1px);
+}
+
+.details > div:last-child {
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details > div:last-child > button {
+    color: #FFFFFF;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    background-color: RGBA(255,255,255,0);
+    display: inline-block;
+    transition: all 300ms ease 0ms;
+    font-weight: 500;
+    line-height: 1.7em;
+    border: 2px solid #ffffff;
+    margin: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 2px 14px;
+    min-width: 210px;
+    text-align: left;
+}
+
+.details > div:last-child > button > span {
+    line-height: inherit;
+    font-size: inherit;
+    display: inline-block;
+    opacity: 1;
+    font-family: ETmodules;
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+@media (max-width: 375px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+}
+
+@media (max-height: 720px) and (max-width: 560px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .details {
+        padding: 8% 19% !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .details {
+        padding: 8% 37% !important;
+    }
+
+    .details > div:last-child {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
