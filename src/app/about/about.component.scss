@@ -1,0 +1,83 @@
+:host {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center bottom 0px;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0) 100%,#000000 100%),url(/assets/bg-night-stars.jpeg);
+    padding-top: 77px;
+    box-sizing: border-box;
+}
+
+:host div {
+    background-color: #fdf9ed;
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+    margin: 0 5% 80px 5%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+:host div a.about {
+    color: #000000;
+    border-radius: 40px;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-family: 'PPRader-Bold',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 800;
+    background-color: RGBA(255,255,255,0);
+    text-decoration: none;
+    padding: 14px 4px;
+    display: inline-block;
+    border: 1px solid #000000;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    line-height: 1.7em;
+}
+
+:host div div.logo {
+    max-width: 80%;
+}
+
+:host div div.player {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:host div div.player iframe {
+    width: 81vw;
+    aspect-ratio: 16/9;
+}
+
+:host div div.logo img {
+    width: 100%;
+}
+
+:host div p {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    word-wrap: break-word;
+    font-size: 12px;
+    max-width: 80%;
+}
+
+:host div p.footer {
+    font-size: 10px;
+    line-height: 1.6em;
+    font-style: italic;
+}
+

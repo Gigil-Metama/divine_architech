@@ -1,0 +1,8 @@
+<nav>
+    <span class="menu-bar" (click)="toggleMenu()">a</span>
+    <ul class="menu" [ngClass]="showMenu ? 'show': 'hide'">
+        <li *ngFor="let route of routes">
+            <a href="/{{route.path}}" [ngClass]="isCurrentRoute(route) ? 'current-menu-item' : ''">{{route.title}}</a>
+        </li>
+    </ul>
+</nav>

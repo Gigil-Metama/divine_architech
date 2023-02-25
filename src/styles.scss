@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: Open Sans,Arial,sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    line-height: 1.7em;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+p {
+    margin: 0;
+}
+
+@font-face{
+	font-family: "ETmodules";
+	font-display: block;
+	src:url(/assets/modules.eot);
+	src:url(/assets/modules.eot?#iefix) format("embedded-opentype"),
+        url(/assets/modules.woff) format("woff"),
+	    url(/assets/modules.ttf)  format("truetype"),
+        url(/assets/modules.svg) format("svg");
+	font-weight:400;
+	font-style:normal
+}
+
+@font-face{
+    font-family:"PP Formula Light";
+    font-display:swap;
+    src:url("/assets/PPFormula-Light.otf") format("opentype")
+}
+
+@font-face{
+    font-family:"PPRader Regular";
+    font-display:swap;
+    src:url("/assets/PPRader-Regular.otf") format("opentype")
+}
+
+@font-face{
+    font-family:"PPRader-Bold";
+    font-display:swap;
+    src:url("/assets/PPRader-Bold.otf") format("opentype")}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+
+input:focus {
+    outline: 0;
+    border: 2px solid #3570D8 !important;
+}
