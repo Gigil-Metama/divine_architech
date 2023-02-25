@@ -1,1 +1,22 @@
-<p>payment works!</p>
+<app-header></app-header>
+<div class="section">
+    <h2>MADE WITH PRAYERS</h2>
+    <p>Turn your hopes into art through AI. Start by donating to our cause.</p>
+</div>
+<form class="details" form #payForm="ngForm">
+    <img src="/assets/visa-mc.png">
+    <h2>PAYMENT</h2>
+    <div>
+        <input required type="text" name="name" #name="ngModel" [(ngModel)]="model.name" placeholder="Full Name">
+        <input required type="email" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email Address" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+        <input required type="text" name="cc" #cc="ngModel" [(ngModel)]="model.cc" placeholder="Credit Card Number" pattern="[0-9\s-]{16,16}" maxlength="16">
+        <div>
+            <input required type="text" name="expiry" #expiry="ngModel" [(ngModel)]="model.expiry" placeholder="Expiry Date" pattern="\b([1-9]|1[0-2]|0[1-9])([2-9]|[2][2-9]|[3-9][0-9])\b" minlength="4" maxlength="4">
+            <input required type="text" name="ccv" #ccv="ngModel" [(ngModel)]="model.ccv"placeholder="CCV" pattern="[0-9\s-]{3,3}" maxlength="3">
+        </div>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!payForm.valid">PAY</button>
+    </div>
+</form>
+<app-footer class="bottom-0"></app-footer>

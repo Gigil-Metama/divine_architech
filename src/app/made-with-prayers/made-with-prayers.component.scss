@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column; 
     align-items: center;
-    flex-wrap: wrap;
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
@@ -86,6 +85,7 @@
      -ms-transition: opacity .5s linear, height .5s linear;
          transition: opacity .5s linear, height .5s linear;
     overflow: hidden;
+    max-width: 80%;
 }
 
 .donation-step2 button {
@@ -123,6 +123,33 @@
     box-sizing: border-box;
 }
 
+.donation-step2 > div > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 280px) and (max-height: 660px) {
+    .donation-step2 > div > div {
+        flex-direction: row !important;
+        
+    }
+    
+    .donation-step2 > div > div > button {
+        min-width: 100px !important;
+    }
+
+    .donation-step2 > button {
+        padding: 0 50px !important;
+    }
+}
+
+@media (max-height: 667px) {
+    .donation-step2 > div > div {
+        flex-direction: row !important;
+    }
+}
+
 .donation-step2 div input::placeholder {
     color: #FFFFFF;
 }
@@ -144,7 +171,7 @@
 }
 
 .donation-step2 div input.ng-invalid {
-    border: 2px solid #b92b2b;
+    border: 2px solid #FB7D7D;
 }
 
 .donation-step2 div input::-webkit-outer-spin-button,

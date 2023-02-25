@@ -6,7 +6,9 @@
 </div>
 <div class="donation-step2" [ngClass]="showDonation ? 'show' : 'hide'">
     <div>
-        <button *ngFor="let a of fixedAmounts" (click)="setDonation(a)" [ngClass]="a.selected ? 'selected': ''">${{a.amount}}</button>
+        <div>
+            <button *ngFor="let a of fixedAmounts" (click)="setDonation(a)" [ngClass]="a.selected ? 'selected': ''">${{a.amount}}</button>
+        </div>
         <input type="number" name="ca" #ca="ngModel" [(ngModel)]="customAmount" min="1" placeholder="OTHER AMOUNT" (ngModelChange)="onPropertyChange(ca)">
     </div>
     <button [disabled]="ca.invalid" (click)="proceed()">PROCEED</button>

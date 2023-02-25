@@ -54,3 +54,8 @@ p {
 .top-0 {
     top: 0;
 }
+
+input:focus {
+    outline: 0;
+    border: 2px solid #3570D8 !important;
+}

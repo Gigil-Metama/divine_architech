@@ -1,0 +1,159 @@
+:host {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center bottom 0px;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0) 100%,#000000 100%),url(/assets/bg-night-stars.jpeg);
+    padding-top: 99px;
+    padding-bottom: 80px;
+}
+
+.section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.details {
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+    margin: 0 5%;
+    padding: 7.15% 9.04%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: rgba(253,249,237,0.82);
+    gap: 16px;
+}
+
+.section h2 {
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    margin: 0 0 23px 0;
+}
+
+.section p {
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.6em;
+    font-size: 11px;
+    max-width: 75%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.details > img {
+    max-width: 31.5%;
+    margin-bottom: 10px;
+    max-height: 26px;
+}
+
+.details > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.details > div:first-of-type input {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    border-radius: 7px 7px 7px 7px;
+    background-color: #eee;
+    color: #999;
+    font-size: 14px;
+    padding: 16px;
+    font-family: Open Sans,Arial,sans-serif;
+    box-sizing: border-box;
+}
+
+.details > div:first-of-type div {
+    width: 100%;
+    display: flex;
+    gap: 9px;
+}
+
+.details > div:first-of-type div input {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.details > div:last-child {
+    padding-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.details > div:last-child > button {
+    color: #FFFFFF;
+    border-color: #1e2d44;
+    border-radius: 15px;
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    background-color: #1e2d44;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0.3em 40px;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+.details > div:last-child > button:disabled {
+    cursor: not-allowed;
+    color: #999;
+}
+
+.details > h2 {
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1em;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-height: 720px) {
+    .details > div:first-of-type input {
+        padding: 8px 16px !important;
+    }
+}
+
+@media (max-width: 280px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .details > div:last-child > button {
+        padding: 0.1em 40px !important;
+    }
+}
+
+@media (max-height: 600px) {
+    :host {
+        padding-top: 66px !important;
+        padding-bottom: 65px !important;
+    }
+}
+
+form .ng-invalid.ng-dirty, form .ng-invalid.ng-touched {
+    border: 2px solid #FB7D7D !important;
+}
+
+
