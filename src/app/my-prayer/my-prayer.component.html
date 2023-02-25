@@ -1,1 +1,34 @@
-<p>my-prayer works!</p>
+<app-header></app-header>
+<div class="section">
+    <h2>MADE WITH PRAYERS</h2>
+    <p>Turn your hopes into art through AI. Start by donating to our cause.</p>
+</div>
+<div class="details">
+    <h2>I pray</h2>
+    <textarea name="pfc" #pfc="ngModel" [(ngModel)]="prayer" placeholder="Your prayer"></textarea>
+    <div>
+        <button>AMEN</button>
+    </div>
+</div>
+<button (click)="toggleTips()">TIPS & GUIDE</button>
+<div class="guide" [ngClass]="popup ? 'guide-visible': ''">
+    <button (click)="toggleTips()">x</button>
+    <h1>*FORMAT</h1>
+    <div>
+        <p>I pray [your personal prayer]</p>
+        <p>I pray for [your personal prayer]</p>    
+    </div>
+    <h1>*TEXT GUIDE</h1>
+    <ul>
+        <li>Refrain from submitting vague statements/ prayers</li>
+        <li>Descriptive prayers are highly encouraged but do not hesitate to submit simple prayers too.</li>
+        <li>For a more elaborate output, feel free to describe your prayers.</li>
+        <li>Refrain from submitting vague statements/ prayers</li>
+        <li>Descriptive prayers are highly encouraged but do not hesitate to submit simple prayers too.</li>
+        <li>For a more elaborate output, feel free to describe your prayers.</li>
+        <li>Refrain from submitting vague statements/ prayers</li>
+    </ul>
+</div>
+<div class="overlay" (click)="toggleTips()" [ngClass]="popup ? 'overlay-visible': ''"></div>
+<app-footer class="bottom-0"></app-footer>
+

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-prayer.component.scss']
 })
 export class MyPrayerComponent {
+  prayer = '';
+  popup = false;
 
+  toggleTips() {
+    this.popup = !this.popup;
+  }
 }
