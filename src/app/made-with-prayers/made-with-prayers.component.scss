@@ -201,3 +201,8 @@
 .selected {
     background-color: rgba(255,255,255)!important;
 }
+
+input:focus {
+    outline: 0;
+    border: 2px solid #3570D8 !important;
+}

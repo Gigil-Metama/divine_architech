@@ -82,6 +82,10 @@
     box-sizing: border-box;
 }
 
+.details > div:first-of-type input:-webkit-autofill {
+    -webkit-text-fill-color: #787777 !important;
+}
+
 .details > div:first-of-type div {
     width: 100%;
     display: flex;
@@ -156,4 +160,9 @@ form .ng-invalid.ng-dirty, form .ng-invalid.ng-touched {
     border: 2px solid #FB7D7D !important;
 }
 
+input:focus {
+    outline: 0;
+    border: 2px solid #3570D8 !important;
+    color: #000000 !important;
+}
 
