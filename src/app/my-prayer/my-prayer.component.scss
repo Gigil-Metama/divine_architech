@@ -214,6 +214,12 @@
     backdrop-filter: saturate(180%) blur(5px);
 }
 
+textarea:focus {
+    outline: 0;
+    border: 2px solid #3570D8 !important;
+    color: #000000 !important;
+}
+
 @media (max-width: 280px) {
     :host {
         padding-top: 66px !important;
