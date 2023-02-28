@@ -16,7 +16,9 @@
         </div>
     </div>
     <div>
-        <button type="submit" [disabled]="!payForm.valid">PAY</button>
+        <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
+        <h3 [ngClass]="error? 'show' : 'hide'">Error. Please try again.</h3>
+        <button type="submit" [disabled]="!payForm.valid" (click)="pay()">PAY</button>
     </div>
 </form>
 <app-footer class="bottom-0"></app-footer>

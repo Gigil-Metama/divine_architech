@@ -220,6 +220,14 @@ textarea:focus {
     color: #000000 !important;
 }
 
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
 @media (max-width: 280px) {
     :host {
         padding-top: 66px !important;

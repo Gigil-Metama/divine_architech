@@ -7,7 +7,8 @@
     <h2>I pray</h2>
     <textarea name="pfc" #pfc="ngModel" [(ngModel)]="prayer" placeholder="Your prayer"></textarea>
     <div>
-        <button>AMEN</button>
+        <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
+        <button (click)="generatePrayer()">AMEN</button>
     </div>
 </div>
 <button (click)="toggleTips()">TIPS & GUIDE</button>
