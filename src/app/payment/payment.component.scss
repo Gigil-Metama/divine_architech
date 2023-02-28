@@ -132,6 +132,15 @@
     padding: 0;
 }
 
+.details > div > h3 {
+    margin: 0 10px;
+    margin-block: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #c82f2f;
+    align-items: center;
+}
+
 @media (max-height: 720px) {
     .details > div:first-of-type input {
         padding: 8px 16px !important;
@@ -166,3 +175,10 @@ input:focus {
     color: #000000 !important;
 }
 
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
