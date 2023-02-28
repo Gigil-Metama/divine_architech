@@ -6,11 +6,12 @@
 <div class="details">
     <div>
         <img src="/assets/art-frame-gold-1.png">
-        <img [src]="url">
+        <img [src]="url" (load)="imgLoaded()" (error)="imgNotFound()" [ngClass]="busy ? 'dim-filter' : ''">
+        <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
     </div>
     <div>
-        <button><span>\</span>MAKE VARIATION</button>
-        <button><span>\</span>DOWNLOAD</button>
+        <button (click)="makeVariation()" [disabled]="busy || prayer === ''"><span>\</span>MAKE VARIATION</button>
+        <a [href]="url" target="_blank"><span>\</span>DOWNLOAD</a>
         <button><span>\</span>PUBLISH PRAYER</button>
     </div>
 </div>

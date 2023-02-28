@@ -23,6 +23,7 @@ export class MyPrayerComponent {
   generatePrayer() {
     this.busy = true;
     localStorage.removeItem('prayer');
+    localStorage.setItem('prayer-text', this.prayer);
     this.api.generatePrayer(this.prayer).subscribe({ 
       next: (v) => {
         this.busy = false;
