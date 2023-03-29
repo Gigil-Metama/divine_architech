@@ -1,11 +1,23 @@
+// :host-orig{
+//     width: 50%;
+//     display: flex;
+//     position: absolute;
+//     left: 0;
+//     height: 50px;
+//     padding: 10px 6px;
+//     box-sizing: border-box;
+// }
+
 :host {
-    width: 50%;
-    display: flex;
-    position: absolute;
-    left: 0;
-    height: 50px;
-    padding: 10px 6px;
     box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    padding: 10px 6px;
+    height: 50px;
+    display: flex;
+    
 }
 
 :host a img {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -10,8 +11,10 @@ export class MyPrayerArtComponent implements OnInit {
   url = '/assets/sample-artwork.jpeg';
   prayer: string | null = '';
   busy = false;
+  no_of_variations = 0;
+  max_variations = 3;
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private router: Router) {
     //
   }
 
@@ -20,6 +23,7 @@ export class MyPrayerArtComponent implements OnInit {
     if ( url != null && url !== '') {
       this.url = url;
       this.prayer = localStorage.getItem('prayer-text');
+      this.no_of_variations = 1;
     }
   }
 
@@ -37,6 +41,7 @@ export class MyPrayerArtComponent implements OnInit {
   makeVariation() {
     if (this.prayer != null && this.prayer != '') {
       this.busy = true;
+      this.no_of_variations += 1;
       this.api.generatePrayer(this.prayer).subscribe({ 
         next: (v) => {
           if (v.success) {
@@ -50,6 +55,24 @@ export class MyPrayerArtComponent implements OnInit {
           this.busy = false;
         }
       });
+    }
+  }
+
+  publishPrayer(){
+    if(this.url && this.url.length>0)
+    {
+      this.busy = true;
+      this.api.publish(this.url).subscribe({
+        next: (v) => {
+          if(v.status){
+            this.router.navigateByUrl('/made-with-prayers-thank-you');
+          }
+        },
+        error: (e) => {
+          this.busy = false;
+        }
+      }
+      );
     }
   }
 }

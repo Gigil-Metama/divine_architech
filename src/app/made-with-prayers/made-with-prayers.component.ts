@@ -13,6 +13,7 @@ export interface FixedAmount {
 })
 
 export class MadeWithPrayersComponent {
+  custom_placeholder="OTHER AMOUNT";
   showDonation: boolean = false;
   customAmount: string = '';
   fixedAmounts: FixedAmount[] = [ 
@@ -46,6 +47,17 @@ export class MadeWithPrayersComponent {
       for (let a of this.fixedAmounts) {
         a.selected = false;
       }
+    }
+  }
+
+  onFocus(): void{
+    this.custom_placeholder = "";
+  }
+
+  onFocusOut(): void{
+    if( +this.customAmount < 4.99 || this.customAmount.trim() === "" ){
+      this.custom_placeholder = "OTHER AMOUNT";
+      this.customAmount = "";
     }
   }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Route, Router, Routes } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -8,9 +8,11 @@ import { filter } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Input() isDarkMenuBar: boolean = false;
   currentPath: string = '/';
   showMenu: boolean = false;
   routes: Routes = [];
+  
 
   constructor(private router: Router) {
     for (let route of this.router.config) {

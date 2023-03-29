@@ -3,6 +3,9 @@
     <h2>MADE WITH PRAYERS</h2>
     <p>Turn your hopes into art through AI. Start by donating to our cause.</p>
 </div>
+<div>
+    <p>({{no_of_variations}}/{{max_variations}})</p>
+</div>
 <div class="details">
     <div>
         <img src="/assets/art-frame-gold-1.png">
@@ -10,9 +13,9 @@
         <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
     </div>
     <div>
-        <button (click)="makeVariation()" [disabled]="busy || prayer === ''"><span>\</span>MAKE VARIATION</button>
+        <button (click)="makeVariation()" [disabled]="busy || prayer === '' || no_of_variations === max_variations"><span>\</span>MAKE VARIATION</button>
         <a [href]="url" target="_blank"><span>\</span>DOWNLOAD</a>
-        <button><span>\</span>PUBLISH PRAYER</button>
+        <button (click)="publishPrayer()"><span>\</span>PUBLISH PRAYER</button>
     </div>
 </div>
 <app-footer class="bottom-0"></app-footer>

@@ -17,13 +17,41 @@ export interface PayResult {
   result: string;
 }
 
+export interface PublishResult{
+  status: boolean;
+  result: string;
+}
+
+export interface PublishListPayload{
+  id: string;
+  url: string;
+  file_name: string;
+  path: string;
+}
+
 export interface PrayPayLoad {
   url: string;
 }
+
 export interface PrayResult {
   success: boolean;
   result: PrayPayLoad;
 }
+
+export interface PublishListResult{
+  success: boolean;
+  result: PublishListPayload[];
+}
+
+export interface TotalDonationPayload{
+  total: number;
+}
+
+export interface TotalDonationResult{
+  success: boolean;
+  result: number;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -70,6 +98,35 @@ export class ApiService {
       options).pipe(
         catchError(this.handleError)
       );
+  }
+
+  publish(url:string): Observable<PublishResult>{
+    const body = new HttpParams()
+      .set('image', url );
+    const options = {
+      headers: new HttpHeaders().set(
+        'Content-Type', 'application/x-www-form-urlencoded'
+      )
+    };
+
+    return this.http.post<PublishResult>(
+      environment.apiUrl + '/api/divinearchitech/publish',
+      body,
+      options).pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  getPublishedImages(): Observable<PublishListResult>{
+    return this.http.get<PublishListResult>(
+      environment.apiUrl + '/api/divinearchitech/publish'
+      );
+  }
+
+  getTotalDonation(): Observable<TotalDonationResult>{
+    return this.http.get<TotalDonationResult>(
+      environment.apiUrl + '/api/divinearchitech/total-donation'
+    );
   }
 
   private handleError(error: HttpErrorResponse) {

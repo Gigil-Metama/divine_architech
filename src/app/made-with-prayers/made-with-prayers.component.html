@@ -9,7 +9,7 @@
         <div>
             <button *ngFor="let a of fixedAmounts" (click)="setDonation(a)" [ngClass]="a.selected ? 'selected': ''">${{a.amount}}</button>
         </div>
-        <input type="number" name="ca" #ca="ngModel" [(ngModel)]="customAmount" min="1" placeholder="OTHER AMOUNT" (ngModelChange)="onPropertyChange(ca)">
+        <input type="number" name="ca" #ca="ngModel" [(ngModel)]="customAmount" min="1" placeholder="{{custom_placeholder}}" (focus)="onFocus()" (focusout)="onFocusOut()" (ngModelChange)="onPropertyChange(ca)">
     </div>
     <button [disabled]="ca.invalid" (click)="proceed()">PROCEED</button>
 </div>

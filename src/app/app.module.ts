@@ -15,6 +15,12 @@ import { MyPrayerThankYouComponent } from './my-prayer-thank-you/my-prayer-thank
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import { PaymentComponent } from './payment/payment.component';
+import { ArtworkComponent } from './made-with-prayers/artwork/artwork.component';
+import { PatronsComponent } from './home/patrons/patrons.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { DonationsComponent } from './home/donations/donations.component';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +34,18 @@ import { PaymentComponent } from './payment/payment.component';
     MyPrayerArtComponent,
     MyPrayerThankYouComponent,
     PageNotFoundComponent,
-    PaymentComponent
+    PaymentComponent,
+    ArtworkComponent,
+    PatronsComponent,
+    DonationsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

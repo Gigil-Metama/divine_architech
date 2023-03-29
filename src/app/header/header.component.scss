@@ -31,12 +31,33 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 0 0;
-    direction: ltr;
+    direction: rtl;
+}
+
+.menu-bar-dark {
+    color: rgba(0,0,0,0.75);
+    font-size: 32px;
+    position: relative;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    font-family: ETmodules;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 0;
+    direction: rtl;
 }
 
 .show {
     opacity: 1;
-    height: 163px !important;
+    height: 313px !important;
 }
 
 .hide {

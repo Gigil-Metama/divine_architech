@@ -12,6 +12,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PaymentComponent } from './payment/payment.component';
 
 import { environment } from './../environments/environment';
+import { ArtworkComponent } from './made-with-prayers/artwork/artwork.component';
+import { PatronsComponent } from './home/patrons/patrons.component';
+import { DonationsComponent } from './home/donations/donations.component';
 
 @Injectable()
 export class CustomTitleStrategy extends TitleStrategy {
@@ -42,11 +45,29 @@ const routes: Routes = [
     data: { menu: { include: true } },
     component: AboutComponent 
   },
+  {
+    path: 'app-patrons',
+    title: '•  Our Patrons',
+    data: {menu: {include: true}},
+    component: PatronsComponent
+  },
+  {
+    path: 'app-donations',
+    title: '•  Donation Update',
+    data: {menu: {include: true}},
+    component: DonationsComponent
+  },
   { 
     path: 'made-with-prayers', 
     title: 'Made with Prayers', 
     data: { menu: { include: true } },
     component: MadeWithPrayersComponent 
+  },
+  {
+    path: 'app-artwork',
+    title: '•  Artwork',
+    data: {menu: {include: true}},
+    component: ArtworkComponent
   },
   { 
     path: 'credit-card-portal', 
