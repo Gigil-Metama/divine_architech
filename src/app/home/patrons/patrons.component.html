@@ -2,25 +2,8 @@
 <div class="patrons">
     <h2>Our Patrons</h2>
     <p>Thank you for donating to our project</p>
-    <div class="main">
-        <div class="single-column" *ngIf="images && images.length > 0">
-            <a *ngIf="images.length > 4"><img src="{{images[images.length-1]}}" alt="image"></a>
-            <a *ngIf="images.length > 5"><img src="{{images[images.length-2]}}" alt="image"></a>
-            <a *ngIf="images.length > 6"><img src="{{images[images.length-3]}}" alt="image"></a>
-            <a *ngIf="images.length > 7"><img src="{{images[images.length-4]}}" alt="image"></a>
-        </div>
-        <div class="single-column" *ngIf="images && images.length > 4">
-            <a *ngIf="images.length > 4"><img src="{{images[images.length-5]}}" alt="image"></a>
-            <a *ngIf="images.length > 5"><img src="{{images[images.length-6]}}" alt="image"></a>
-            <a *ngIf="images.length > 6"><img src="{{images[images.length-7]}}" alt="image"></a>
-            <a *ngIf="images.length > 7"><img src="{{images[images.length-8]}}" alt="image"></a>
-        </div>
-        <div class="single-column" *ngIf="images && images.length > 8">
-            <a *ngIf="images.length > 4"><img src="{{images[images.length-9]}}" alt="image"></a>
-            <a *ngIf="images.length > 5"><img src="{{images[images.length-10]}}" alt="image"></a>
-            <a *ngIf="images.length > 6"><img src="{{images[images.length-11]}}" alt="image"></a>
-            <a *ngIf="images.length > 7"><img src="{{images[images.length-12]}}" alt="image"></a>
-        </div>
+    <div class="main" hidden>
+        <img src="/assets/patrons.png">
     </div>
 </div> 
 <app-footer class="bottom-0"></app-footer>

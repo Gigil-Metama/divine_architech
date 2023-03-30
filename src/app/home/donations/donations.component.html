@@ -4,10 +4,12 @@
     <div class="ground-container">
         <img src="/assets/church_ground_image.jpg" title="Church Ground">
     </div>
-    <p class="church_name">BLESSED FREDERIC OZANAM CHURCH</p>
-    <div class="mpb">
-        <mat-progress-bar mode="determinate" value="percent"></mat-progress-bar>
+    <div class="cmt">
+        <p class="church_name">BLESSED FREDERIC OZANAM CHURCH</p>
+        <div class="mpb">
+            <mat-progress-bar mode="determinate" value="percent"></mat-progress-bar>
+        </div>
+        <p class="tot_donations">${{total_donations|number}} of ${{goal|number}} DONATED</p>
     </div>
-    <p class="tot_donations">${{total_donations|number}} of ${{goal|number}} DONATED</p>
 </div>
 <app-footer class="bottom-0"></app-footer>
