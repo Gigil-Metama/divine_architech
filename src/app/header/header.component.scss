@@ -11,7 +11,7 @@
     align-content: center;
     justify-content: center;
     align-items: flex-end;
-    z-index: 21;
+    z-index: 20;
 }
 
 .menu-bar {
@@ -34,27 +34,6 @@
     text-shadow: 0 0;
     direction: rtl;
     z-index: 20;
-}
-
-.menu-bar-dark {
-    color: rgba(0,0,0,0.75);
-    font-size: 32px;
-    position: relative;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    font-family: ETmodules;
-    font-style: normal;
-    font-weight: 400;
-    -webkit-font-feature-settings: normal;
-    font-feature-settings: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow: 0 0;
-    direction: rtl;
 }
 
 .show {
