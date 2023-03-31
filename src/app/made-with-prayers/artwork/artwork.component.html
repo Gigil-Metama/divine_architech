@@ -1,24 +1,24 @@
 <app-header></app-header>
 <div class="artwork">
     <h2>Artwork Gallery</h2>
-    <p>[CTA for buying] Proceeds of the sale will go to the project as well</p>
+    <p>Donate and display your own artwork.</p>
     <div class="main">
         <div class="single-column" *ngIf="images && images.length > 0" 
             (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
             [style.align-self]="isOdd ? 'flex-end' : 'auto'"
             [style.--direction]="isOdd ? '50%' : '-50%'">
-            <!-- [@slide]="animationState"> -->
             <a *ngIf="images.length > 0"><img src="{{images[images.length-1]}}" alt="image"></a>
             <a *ngIf="images.length > 1"><img src="{{images[images.length-2]}}" alt="image"></a>
             <a *ngIf="images.length > 2"><img src="{{images[images.length-3]}}" alt="image"></a>
-            <!-- <a *ngIf="images.length > 3"><img src="{{images[images.length-4]}}" alt="image"></a> -->
         </div>
         <div class="single-column" *ngIf="images && images.length > 3">
             <a *ngIf="images.length > 3"><img src="{{images[images.length-4]}}" alt="image"></a>
             <a *ngIf="images.length > 4"><img src="{{images[images.length-5]}}" alt="image"></a>
             <a *ngIf="images.length > 5"><img src="{{images[images.length-6]}}" alt="image"></a>
-            <!-- <a *ngIf="images.length > 7"><img src="{{images[images.length-8]}}" alt="image"></a> -->
         </div>
     </div>
 </div> 
 <app-footer class="bottom-0"></app-footer>
+<!-- <div class="image_slider" >
+    <app-image-slider [slides]="slideImages"></app-image-slider>
+</div> -->

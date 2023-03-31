@@ -3,3 +3,19 @@
     <img src="/assets/logo-vertical-white.png" title="divine-architect-logo">
 </div>
 <app-footer class="top-0"></app-footer>
+
+<div class="popup-overlay" *ngIf="showPopup">
+    <div class="popup-container">
+        <div class="popup-header">
+            <button class="close-button" (click)="closePopup()">X</button>
+        </div>
+        <div class="popup-content">
+            <h2>MADE WITH PRAYERS</h2>
+            <p>{{paragraph1}}</p>
+            <p>{{paragraph2}}</p>
+        </div>
+        <div class="popup-footer">
+        <button class="continue-button" (click)="continue()">CONTINUE</button>
+        </div>
+    </div>
+</div>

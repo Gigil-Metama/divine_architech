@@ -20,6 +20,9 @@ import { PatronsComponent } from './home/patrons/patrons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DonationsComponent } from './home/donations/donations.component';
+import { ImageSliderComponent } from './image-slider/image-slider.component';
+import { ImageSliderModule } from './image-slider/image-slider.module';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 
 @NgModule({
@@ -37,7 +40,7 @@ import { DonationsComponent } from './home/donations/donations.component';
     PaymentComponent,
     ArtworkComponent,
     PatronsComponent,
-    DonationsComponent
+    DonationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +48,12 @@ import { DonationsComponent } from './home/donations/donations.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ImageSliderModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -24,3 +24,97 @@
     width: 100%;
     max-width: 270px;
 }
+
+
+//POPUP
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11
+  }
+  
+  .popup-container {
+    width: 80%;
+    background-color: whitesmoke;
+    opacity: 90%;
+    border-radius: 5px;
+    border-width: 5px;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-button {
+    font-size: 20px;
+    color: 000;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .popup-content h2 {
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-block: 0;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    }
+
+  .popup-content p {
+    font-family: 'PP Formula Light',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.6em;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .popup-footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .continue-button {
+    color: #fff;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
+    background-color: #1e2d44;
+    display: inline-block;
+    transition: all 300ms ease 0ms;
+    font-weight: 800;
+    line-height: 2em;
+    border: 2px solid #ffffff;
+    margin: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 2px 14px;
+    min-width: 210px;
+    text-align: center;
+  }
+  
+  
+  

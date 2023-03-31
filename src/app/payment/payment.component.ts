@@ -33,6 +33,7 @@ export class PaymentComponent implements OnInit {
     this.busy = true;
     if(+this.model.amt === 4.99) this.router.navigateByUrl('/my-prayer');
     else{
+      this.model.expiry = this.model.expiry.replace('/','');
       this.api.pay(this.model).subscribe({ 
         next: (v) => {
           this.busy = false;

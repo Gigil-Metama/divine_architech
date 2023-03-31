@@ -11,6 +11,7 @@
     align-content: center;
     justify-content: center;
     align-items: flex-end;
+    z-index: 21;
 }
 
 .menu-bar {
@@ -32,6 +33,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 0 0;
     direction: rtl;
+    z-index: 20;
 }
 
 .menu-bar-dark {
@@ -57,7 +59,7 @@
 
 .show {
     opacity: 1;
-    height: 313px !important;
+    height: 263px !important;
 }
 
 .hide {

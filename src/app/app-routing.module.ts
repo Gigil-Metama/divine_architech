@@ -40,24 +40,6 @@ const routes: Routes = [
     component: HomeComponent 
   },
   { 
-    path: 'about-mobile', 
-    title: 'About', 
-    data: { menu: { include: true } },
-    component: AboutComponent 
-  },
-  {
-    path: 'app-patrons',
-    title: '•  Our Patrons',
-    data: {menu: {include: true}},
-    component: PatronsComponent
-  },
-  {
-    path: 'app-donations',
-    title: '•  Donation Update',
-    data: {menu: {include: true}},
-    component: DonationsComponent
-  },
-  { 
     path: 'made-with-prayers', 
     title: 'Made with Prayers', 
     data: { menu: { include: true } },
@@ -68,6 +50,24 @@ const routes: Routes = [
     title: '•  Artwork',
     data: {menu: {include: true}},
     component: ArtworkComponent
+  },
+  { 
+    path: 'about-mobile', 
+    title: 'About', 
+    data: { menu: { include: true } },
+    component: AboutComponent 
+  },
+  {
+    path: 'app-patrons',
+    title: '•  Our Patrons',
+    data: {menu: {include: false}},
+    component: PatronsComponent
+  },
+  {
+    path: 'app-donations',
+    title: '•  Donation Update',
+    data: {menu: {include: true}},
+    component: DonationsComponent
   },
   { 
     path: 'credit-card-portal', 

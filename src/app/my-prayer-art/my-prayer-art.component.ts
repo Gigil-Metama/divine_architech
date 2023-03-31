@@ -13,6 +13,10 @@ export class MyPrayerArtComponent implements OnInit {
   busy = false;
   no_of_variations = 0;
   max_variations = 3;
+  disclaimerText1 ='I understand that by publishing this image on the gallery, I transfer the rights to Divine Architech, allowing them to mint it as an NFT on the marketplace under their wallet in OpenSea.';
+  disclaimerText2 = '* By allowing Divine Architech to mint the image as an NFT, you are helping the cause to earn more funds via NFT sales.';
+
+  showPopup = false;
 
   constructor(private api: ApiService, private router: Router) {
     //
@@ -58,7 +62,15 @@ export class MyPrayerArtComponent implements OnInit {
     }
   }
 
+  closePopup(){
+    this.showPopup = false;
+  }
+
   publishPrayer(){
+    this.showPopup = true;
+  }
+
+  confirm(){
     if(this.url && this.url.length>0)
     {
       this.busy = true;

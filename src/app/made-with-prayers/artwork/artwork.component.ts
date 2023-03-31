@@ -1,6 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { SlideInterface } from 'src/app/types/slider.interface';
 
 @Component({
   selector: 'app-artwork',
@@ -32,6 +33,8 @@ export class ArtworkComponent implements OnInit {
     // "https://picsum.photos/300/300?random=7",
     // "https://picsum.photos/300/300?random=8",
   ]
+  slideImages: SlideInterface[] = [];
+  sliderVisible: boolean = true;
   
   ngOnInit(): void {
     this.getImages();
@@ -46,6 +49,11 @@ export class ArtworkComponent implements OnInit {
       next: (i) => {    
         if(i.success && i.result){
           this.images = i.result.map(function(img){return img.url})
+          this.slideImages = i.result.map(({ url, file_name }) => ({
+            url,
+            title: file_name,
+          }));
+          // console.log(this.slideImages);
         }
       }
     })
