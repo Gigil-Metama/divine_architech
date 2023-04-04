@@ -1,13 +1,14 @@
 <app-header></app-header>
 <div class="donations">
-    <p class="description">Your donations are the foundation of our church. Donate now and be part of our growing community of Divine Architech.</p>
+    <h2>Donation Update</h2>
+    <p class="description">Your donations are the foundation of our church. Donate now and be part of our growing community of Divine ArchiTech.</p>
     <div class="ground-container">
         <img src="/assets/church_ground_image.jpg" title="Church Ground">
     </div>
     <div class="cmt">
         <p class="church_name">BLESSED FREDERIC OZANAM CHURCH</p>
         <div class="mpb">
-            <mat-progress-bar mode="determinate" value="percent"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value={{percent}}></mat-progress-bar>
         </div>
         <p class="tot_donations">${{total_donations|number}} of ${{goal|number}} DONATED</p>
     </div>

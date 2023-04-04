@@ -70,10 +70,10 @@
     max-width: 270px;
 }
 
-.ground-container mat-progress-bar{
-    max-width: 270px;
-    width: 100%;
-}
+// .ground-container mat-progress-bar{
+//     max-width: 270px;
+//     width: 100%;
+// }
 
 .church_name {
     margin-top: 30px;
@@ -97,3 +97,40 @@
     align-items: start;
     width: 80%;
 }
+
+// .mdc-linear-progress {
+//     height: var(--mdc-linear-progress-track-height, 20px  !important);
+// }
+
+.mdc-linear-progress {
+    height: 20px;
+    border-radius: 10px;
+}
+
+// .mat-mdc-progress-bar {
+//     --mdc-linear-progress-active-indicator-color: #A18187 !important; 
+// }
+
+// .mdc-linear-progress__bar-inner {
+//     border-top-width: var(--mdc-linear-progress-track-height, 20px !important);
+// }
+
+// .mdc-linear-progress__bar-inner {
+//     border-color: var(--mdc-linear-progress-active-indicator-color, #483C32 !important);
+// }
+
+
+
+.mat-mdc-progress-bar {
+    // #D1C7B8
+    --mdc-linear-progress-active-indicator-color: #B79D68;
+    --mdc-linear-progress-track-height: 20px;
+    // --mdc-linear-progress-border-radius: 10px;
+    // --mdc-linear-progress__buffer-bar-background-color: #D1C788;
+}
+
+
+// .mdc-linear-progress__bar-inner {
+//     border-top-width: var(--mdc-linear-progress-track-height, 20px !important);
+// }
+

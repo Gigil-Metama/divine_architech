@@ -15,6 +15,7 @@ export class DonationsComponent implements OnInit{
       next: (v) => {
         if(v.success){
           this.total_donations = v.result;
+          // this.total_donations = 100000;
           this.compute_percent();
         }
       }
@@ -29,6 +30,7 @@ export class DonationsComponent implements OnInit{
 
   compute_percent(){
     this.percent =  this.total_donations/this.goal*100;
+    // this.percent = 90;
     
   }
 }
