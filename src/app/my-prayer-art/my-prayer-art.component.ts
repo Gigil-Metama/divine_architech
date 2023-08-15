@@ -15,11 +15,21 @@ export class MyPrayerArtComponent implements OnInit {
   max_variations = 3;
   disclaimerText1 ='I understand that by publishing this image on the gallery, I transfer the rights to Divine ArchiTech, allowing them to mint it as an NFT on the marketplace under their wallet in OpenSea.';
   disclaimerText2 = '* By allowing Divine ArchiTech to mint the image as an NFT, you are helping the cause to earn more funds via NFT sales.';
-
+  state: {
+    name: string;
+    email: string;
+  } = {
+    name: '',
+    email: ''
+  }
   showPopup = false;
 
   constructor(private api: ApiService, private router: Router) {
-    //
+    const navigation = this.router.getCurrentNavigation();
+    this.state = navigation?.extras.state as {
+      name: string,
+      email: string
+    };
   }
 
   ngOnInit() {
@@ -74,7 +84,7 @@ export class MyPrayerArtComponent implements OnInit {
     if(this.url && this.url.length>0)
     {
       this.busy = true;
-      this.api.publish(this.url).subscribe({
+      this.api.publish(this.url, this.state.name, this.state.email).subscribe({
         next: (v) => {
           if(v.status){
             this.router.navigateByUrl('/made-with-prayers-thank-you');

@@ -100,9 +100,11 @@ export class ApiService {
       );
   }
 
-  publish(url:string): Observable<PublishResult>{
+  publish(url:string, name:string, email:string): Observable<PublishResult>{
     const body = new HttpParams()
-      .set('image', url );
+      .set('image', url )
+      .set('name', name )
+      .set('email', email );
     const options = {
       headers: new HttpHeaders().set(
         'Content-Type', 'application/x-www-form-urlencoded'

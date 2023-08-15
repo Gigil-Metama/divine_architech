@@ -38,7 +38,7 @@ export class PaymentComponent implements OnInit {
         next: (v) => {
           this.busy = false;
           if (v.success) {
-            this.router.navigateByUrl('/my-prayer');
+            this.router.navigate(['/my-prayer'], { state: { name: this.model.name, email: this.model.email }});
           } else {
             this.error = true;
           }

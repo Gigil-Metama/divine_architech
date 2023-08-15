@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -11,9 +11,20 @@ export class MyPrayerComponent {
   prayer = '';
   popup = false;
   busy = false;
+  state: {
+    name: string;
+    email: string;
+  } = {
+    name: '',
+    email: ''
+  }
 
   constructor(private api: ApiService, private router: Router) {
-    //
+    const navigation = this.router.getCurrentNavigation();
+    this.state = navigation?.extras.state as {
+      name: string,
+      email: string
+    };
   }
 
   toggleTips() {
@@ -32,11 +43,11 @@ export class MyPrayerComponent {
             localStorage.setItem('prayer', v.result.url);
           }
         }
-        this.router.navigateByUrl('/made-with-prayers-art');
+        this.router.navigate(['/made-with-prayers-art'], { state: { ...this.state } });
       },
       error: (e) => {
         this.busy = false;
-        this.router.navigateByUrl('/made-with-prayers-art');
+        this.router.navigate(['/made-with-prayers-art'], { state: { ...this.state } });
       }
     });
   }

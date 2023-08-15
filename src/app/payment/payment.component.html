@@ -18,7 +18,7 @@
     <div class="donation-button">
         <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
         <h3 [ngClass]="error? 'show' : 'hide'">Error. Please try again.</h3>
-        <button [disabled]="!payForm.valid" type="submit" (click)="pay()">DONATE</button>
+        <button  type="submit" (click)="pay()">DONATE</button>
     </div>
     <div class="powered-by-stripe">
         <img src="/assets/stripe-outline.png">
