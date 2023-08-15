@@ -11,6 +11,12 @@
     padding-top: 99px;
 }
 
+@media screen and (max-width: 480px) {
+    :host {
+        padding-top: 66px;
+    }
+}
+
 :host h2 {
     font-family: 'PPRader Regular',Helvetica,Arial,Lucida,sans-serif;
     font-size: 28px;

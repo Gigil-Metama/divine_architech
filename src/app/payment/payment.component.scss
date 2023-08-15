@@ -12,6 +12,12 @@
     padding-bottom: 80px;
 }
 
+@media screen and (max-width: 480px) {
+    :host {
+        padding-top: 66px;
+    }
+}
+
 .section {
     width: 80%;
     display: flex;
@@ -97,14 +103,14 @@
     box-sizing: border-box;
 }
 
-.details > div:last-child {
+.details > div.donation-button {
     padding-top: 8px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.details > div:last-child > button {
+.details > div.donation-button > button {
     color: #FFFFFF;
     border-color: #1e2d44;
     border-radius: 15px;
@@ -117,7 +123,7 @@
     line-height: 1.7em;
 }
 
-.details > div:last-child > button:disabled {
+.details > div.donation-button > button:disabled {
     cursor: not-allowed;
     color: #999;
 }
@@ -153,7 +159,7 @@
         padding-bottom: 65px !important;
     }
 
-    .details > div:last-child > button {
+    .details > div.donation-button > button {
         padding: 0.1em 40px !important;
     }
 }
@@ -169,6 +175,10 @@ form .ng-invalid.ng-dirty, form .ng-invalid.ng-touched {
     border: 2px solid #FB7D7D !important;
 }
 
+input {
+    border: 2px solid #bab8b5 !important;
+}
+
 input:focus {
     outline: 0;
     border: 2px solid #3570D8 !important;
@@ -181,4 +191,21 @@ input:focus {
 
 .hide {
     display: none;
+}
+
+.powered-by-stripe {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.powered-by-stripe > img {
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+
+    .powered-by-stripe > img {
+        height: 30px;
+    }
 }

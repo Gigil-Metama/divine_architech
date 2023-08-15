@@ -2,8 +2,13 @@
 <div class="artwork">
     <h2>Artwork Gallery</h2>
     <p>Donate and display your own artwork.</p>
+    <p class="label"><b>Number of prayers generated:</b></p>
+    <p class="count">{{ ("0000" + images.length).slice(-4) }}</p>
     <div class="main">
-        <div class="single-column" *ngIf="images && images.length > 0" 
+        <div class="image-container" *ngFor="let image of images; let i = index">
+            <img src="{{ image }}" alt="image" />
+        </div>
+        <!-- <div class="single-column" *ngIf="images && images.length > 0" 
             (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
             [style.align-self]="isOdd ? 'flex-end' : 'auto'"
             [style.--direction]="isOdd ? '50%' : '-50%'">
@@ -15,7 +20,7 @@
             <a *ngIf="images.length > 3"><img src="{{images[images.length-4]}}" alt="image"></a>
             <a *ngIf="images.length > 4"><img src="{{images[images.length-5]}}" alt="image"></a>
             <a *ngIf="images.length > 5"><img src="{{images[images.length-6]}}" alt="image"></a>
-        </div>
+        </div> -->
     </div>
 </div> 
 <app-footer class="bottom-0"></app-footer>

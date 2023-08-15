@@ -15,10 +15,13 @@
             <input required type="text" name="ccv" #ccv="ngModel" [(ngModel)]="model.ccv"placeholder="CCV" pattern="[0-9\s-]{3,3}" maxlength="3">
         </div>
     </div>
-    <div>
+    <div class="donation-button">
         <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
         <h3 [ngClass]="error? 'show' : 'hide'">Error. Please try again.</h3>
         <button [disabled]="!payForm.valid" type="submit" (click)="pay()">DONATE</button>
+    </div>
+    <div class="powered-by-stripe">
+        <img src="/assets/stripe-outline.png">
     </div>
 </form>
 <app-footer class="bottom-0"></app-footer>
