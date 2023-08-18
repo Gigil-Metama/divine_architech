@@ -18,8 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   showPopup=false;
-  paragraph1: string = "Help build churches by generating and donating your own NFT.";
-  paragraph2: string = "Turn your hopes into digital art through AI today.";
 
   closePopup(){
     this.showPopup = false;

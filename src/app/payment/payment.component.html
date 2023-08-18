@@ -14,11 +14,15 @@
             <input required type="text" name="expiry" #expiry="ngModel" [(ngModel)]="model.expiry" placeholder="Expiry (MM/YY)" pattern="^(0[1-9]|1[0-2])\/\d{2}$" >
             <input required type="text" name="ccv" #ccv="ngModel" [(ngModel)]="model.ccv"placeholder="CCV" pattern="[0-9\s-]{3,3}" maxlength="3">
         </div>
+        <label class="terms-and-conditions">
+            <input required type="checkbox" name="terms" [(ngModel)]="termsAndConditions" (change)="onChange(termsAndConditions)">
+            I agree to the <a href="/assets/docs/Terms&Conditions.pdf" target="_blank">terms & conditions</a>.
+        </label>
     </div>
     <div class="donation-button">
         <div class="loading-ellipsis" [ngClass]="busy? 'show' : 'hide'"><div></div><div></div><div></div><div></div></div>
         <h3 [ngClass]="error? 'show' : 'hide'">Error. Please try again.</h3>
-        <button  type="submit" (click)="pay()">DONATE</button>
+        <button  type="submit" (click)="pay()" [disabled]="!termsAndConditions">DONATE</button>
     </div>
     <div class="powered-by-stripe">
         <img src="/assets/stripe-outline.png">

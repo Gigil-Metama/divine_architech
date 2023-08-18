@@ -14,6 +14,7 @@ export class PaymentComponent implements OnInit {
   }
   busy = false;
   error = false;
+  termsAndConditions = false;
 
   constructor(
     private route: ActivatedRoute, 
@@ -26,6 +27,10 @@ export class PaymentComponent implements OnInit {
       this.route.queryParams.subscribe(params => {
         this.model.amt = params['amt'];
       });
+  }
+
+  onChange(value: boolean) {
+    this.termsAndConditions = value;
   }
 
   pay() {
